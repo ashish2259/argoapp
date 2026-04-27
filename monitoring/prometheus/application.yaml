@@ -12,8 +12,7 @@ spec:
     chart: kube-prometheus-stack
     targetRevision: 61.7.2
 
-    helm:
-      skipCrds: false   
+    helm:   
       valueFiles:
         - values.yaml
 
