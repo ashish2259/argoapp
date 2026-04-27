@@ -1,0 +1,18 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: nginx-html
+  namespace: argo-demo
+data:
+  index.html: |
+    <!DOCTYPE html>
+    <html>
+    <head>
+        <title>AWS Argo Demo</title>
+    </head>
+    <body style="text-align:center; font-family:Arial;">
+        <h1>🚀 Welcome to AWS Argo Demo</h1>
+        <h2>Deployed using Argo CD</h2>
+        <p>Running on Kubernetes</p>
+    </body>
+    </html>
