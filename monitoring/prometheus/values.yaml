@@ -1,39 +1,38 @@
 grafana:
+  enabled: true
   adminPassword: admin123
 
   service:
     type: ClusterIP
 
   persistence:
-    enabled: true
-    size: 10Gi
+    enabled: false
 
 prometheus:
   enabled: true
+
   prometheusSpec:
     retention: 15d
+    replicas: 1
 
-    storageSpec:
-      volumeClaimTemplate:
-        spec:
-          accessModes: ["ReadWriteOnce"]
-          resources:
-            requests:
-              storage: 20Gi
+    storageSpec: null
 
 alertmanager:
   enabled: true
-  alertmanagerSpec:
-    storage:
-      volumeClaimTemplate:
-        spec:
-          accessModes: ["ReadWriteOnce"]
-          resources:
-            requests:
-              storage: 10Gi
 
-nodeExporter:
+  alertmanagerSpec:
+    replicas: 1
+
+    storage: null
+
+prometheusOperator:
   enabled: true
 
 kubeStateMetrics:
   enabled: true
+
+nodeExporter:
+  enabled: true
+
+defaultRules:
+  create: true
