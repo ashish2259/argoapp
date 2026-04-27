@@ -10,6 +10,7 @@ grafana:
     size: 10Gi
 
 prometheus:
+  enabled: true
   prometheusSpec:
     retention: 15d
 
@@ -22,6 +23,7 @@ prometheus:
               storage: 20Gi
 
 alertmanager:
+  enabled: true
   alertmanagerSpec:
     storage:
       volumeClaimTemplate:
