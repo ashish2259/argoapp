@@ -13,6 +13,7 @@ spec:
     targetRevision: 61.7.2
 
     helm:
+      skipCrds: false   
       valueFiles:
         - values.yaml
 
