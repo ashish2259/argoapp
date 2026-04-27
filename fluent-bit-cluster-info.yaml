@@ -5,7 +5,7 @@ metadata:
   name: cluster-info
   namespace: amazon-cloudwatch
 data:
-  cluster.name: production-k8s
+  cluster.name: kubernetes
   logs.region: ap-south-1
   http.server: "On"
   http.port: "2020"
