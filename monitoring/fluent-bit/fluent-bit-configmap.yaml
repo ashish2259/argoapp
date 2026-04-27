@@ -36,7 +36,7 @@ data:
     [OUTPUT]
         Name                cloudwatch_logs
         Match               kube.*
-        region              ap-south-1
+        region              us-east-1
         log_group_name      /aws/containerinsights/kubernetes/application
         log_stream_prefix   from-fluent-bit-
         auto_create_group   true
